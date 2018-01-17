@@ -107,7 +107,9 @@ class AboutUsController extends Controller
         // Oude afbeelding ophalen
 
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+
+        if ($editForm->isSubmitted()) {
 
             if (strlen($aboutUs->getPicture()) > 25){
 

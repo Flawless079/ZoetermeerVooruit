@@ -20,9 +20,9 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw voornaam in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw voornaam in.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=255,
@@ -31,12 +31,12 @@ class User extends BaseUser
      *     groups={"Registration", "Profile"}
      *  )
      */
-    protected $firstname ;
+    protected $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw achternaam in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw achternaam in.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=255,
@@ -48,9 +48,9 @@ class User extends BaseUser
     protected $lastname ;
 
     /**
-     * @ORM\Column(type="string", length=5)
+     * @ORM\Column(type="string", length=5, nullable=true)
      *
-     * @Assert\NotBlank(message="Selecteer uw geslacht.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Selecteer uw geslacht.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=5,
@@ -60,17 +60,17 @@ class User extends BaseUser
     protected $gender ;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw geboortedatum in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw geboortedatum in.", groups={"Profile"})
      *
      */
     protected $birthdate;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw adresgegevens in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw adresgegevens in.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=255,
@@ -80,9 +80,9 @@ class User extends BaseUser
     protected $address;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=10, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw postcode in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw postcode in.", groups={"Profile"})
      * @Assert\Length(
      *     min=6,
      *     max=7,
@@ -92,9 +92,9 @@ class User extends BaseUser
     protected $postal;
 
     /**
-     * @ORM\Column(type="string", length=55)
+     * @ORM\Column(type="string", length=55, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw woonplaats in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw woonplaats in.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=55,
@@ -104,9 +104,9 @@ class User extends BaseUser
     protected $city;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw telefoonnummer in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw telefoonnummer in.", groups={"Profile"})
      * @Assert\Length(
      *     min=8,
      *     max=12,
@@ -116,9 +116,9 @@ class User extends BaseUser
     protected $phone;
 
     /**
-     * @ORM\Column(type="string", length=55)
+     * @ORM\Column(type="string", length=55, nullable=true)
      *
-     * @Assert\NotBlank(message="Vul uw bankrekening in.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Vul uw bankrekening in.", groups={"Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=25,

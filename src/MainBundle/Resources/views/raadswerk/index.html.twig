@@ -3,14 +3,13 @@
 {% block body %}
     <div class="container">
         {% if is_granted ('ROLE_ADMIN') %}
-        <a class="btn btn-success" href="{{ path('raadswerk_new') }}">+ Nieuw bericht aanmaken</a>
+        <a class="btn btn-success pull-right" href="{{ path('raadswerk_new') }}">+ Nieuw bericht aanmaken</a>
         {% endif %}
-
         <h1>Raadswerk</h1>
         <div class="row">
             {% for raadswerk in raadswerks %}
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
+                    <div class="thumbnail" id="news">
                         <div class="caption">
                             <div class="row">
                                 <div class="col-sm-12">

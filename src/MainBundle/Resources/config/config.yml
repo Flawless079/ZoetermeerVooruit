@@ -8,6 +8,9 @@ fos_user:
     registration:
         form:
             type: MainBundle\Form\RegistrationType
+    profile:
+        form:
+            type: MainBundle\Form\ProfileType
 twig:
     form_themes: ['bootstrap_3_layout.html.twig']
 

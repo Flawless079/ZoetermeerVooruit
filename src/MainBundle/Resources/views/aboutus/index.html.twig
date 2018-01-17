@@ -3,7 +3,11 @@
 {% block body %}
 
 
-
+    {% if is_granted ('ROLE_ADMIN') %}
+        <div class="col-md-12">
+            <a class="btn btn-success pull-left" href="{{ path('aboutus_new') }}">Nieuwe tekst toevoegen</a>
+        </div>
+    {% endif %}
         <div class="container">
             <div class="row">
                 {% set counter = 0 %}
@@ -57,9 +61,6 @@
                     {% set counter = counter + 1 %}
                 {% endfor %}
             </div>
-            {% if is_granted ('ROLE_ADMIN') %}
-                <a class="btn btn-success pull-right" href="{{ path('aboutus_new') }}">Nieuwe tekst toevoegen</a>
-            {% endif %}
         </div>
 
 {% endblock %}

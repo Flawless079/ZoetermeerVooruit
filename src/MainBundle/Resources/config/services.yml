@@ -7,6 +7,11 @@ services:
         tags:
             - { name: form.type, alias: app_user_registration }
 
+    app.form.profile:
+        class: MainBundle\Form\ProfileType
+        tags:
+            - { name: form.type, alias: app_user_profile }
+
     twig.extension.text:
         class: Twig_Extensions_Extension_Text
         tags:

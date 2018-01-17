@@ -30,7 +30,6 @@ class AboutUsType extends AbstractType
             'label' => 'Afbeelding',
             'required' => false
 
-
             ]);
     }
     
